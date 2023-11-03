@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game Sahabat</title>
+    <link rel="stylesheet" href="../style.css">
+    
+</head>
+<body>
+    <div class="page">
+        <div class="grid-container1">
+            <div class="grid-item"><p style="font-size: small;">Memory Game</p><p style="font-size: small;">Sahabat</p></div>
+            <div class="grid-item"> <img src="../assets/icons/logo hadith exercise.png" alt="logo" width="20%"> </div>
+            <div class="grid-item"> <p style="font-size: small;">Memory Game</p><p style="font-size: small;">Sahabat</p> </div>  
+        </div>
+        <div class="memorygamecontainer">
+            <h1 class="titlememorygame">Matching Game Sahabat</h1>
+            <div class="scoretimercontainer">
+                <span id="score"> 0 match(es)</span>
+                <span id="timer"> time 0 </span>
+            </div>
+            <div class="memorygameboard" id="memorygameboard">
+                <div class="card">umar</div>
+                <div class="card">ramu</div>
+                <div class="card">ali</div>
+                <div class="card">lia</div>
+                <div class="card">zaid</div>
+                <div class="card">diaz</div>
+                <div class="card">anas</div>
+                <div class="card">sana</div>
+                <div class="card">amru</div>
+                <div class="card">urma</div>
+                <div class="card">abbas</div>
+                <div class="card">sabba</div>  
+            </div>
+            <button class="reset" onclick="shuffle(array);"> Reset </button>
+            <!--<div class="pesangamecontainer" id="pesangamecontainer">
+                <span id="pesan"> <b>Ayo Main</b> </span>
+                <span id="ayomainbtn"> mulai </span>
+            </div>
+            <div class="pesangamecontainer" id="pesangamecontainerend" style="visibility: hidden;">
+                <span id="pesan"> <b>Time out</b> </span>
+                <span id="ayomainbtn"> reset </span>
+            </div>-->
+        </div>
+    </div>
+
+    <footer style=" text-align: center; font-size: 5px; padding-top: 20px;">
+        hadith exercise v1.0
+    </footer>
+
+    <script>
+        const cards = document.querySelectorAll ("memorygameboard")
+        let array = Array.from("memorygameboard")
+        console.log (array.length);
+        console.log (array.slice)
+        var shuf_array = array.shuffle (() => (Math.random() > .5 ? 2 : -1));
+            for ( var i =0; i<array.length; i++){
+            let box = document.getElementsByClassName("memorygameboard")
+            box.className = 'card';
+           // box.innerHTML = shuf_array[i];
+
+          
+
+           // document.querySelector('.memorygameboard').appendChild(box);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memmory Game</title>
+</head>
+<body>
+    <div class="head">
+        <h2>Memmory Game</h2>
+        <div class="score">Score: <span>0</span></div>
+    </div>
+
+    <div class="container">
+        <div class="cell">
+            <div class="front" data-index="1">aaa</div>
+            <div class="back"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="1">bbb</div>
+            <div class="back"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="2">ccc</div>
+            <div class="back"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="2">ddd</div>
+            <div class="back"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="3">eee</div>
+            <div class="back"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="3">fff</div>
+            <div class="back"></div>
+        </div>
+      
+    </div>
+
+    <style>
+        * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f2f2f2;
+}
+
+.head {
+  max-width: 480px;
+  border: 2px solid #a6a6a6;
+  margin: auto;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  font-family: "Orbitron", sans-serif;
+  color: #333;
+}
+
+.score {
+  margin-top: 10px;
+}
+
+.container {
+  max-width: 960px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 1rem;
+  margin: auto;
+  padding: 20px;
+}
+
+.cell div {
+  height: 130px;
+  border-radius: 4px;
+}
+
+.cell {
+  position: relative;
+  cursor: pointer;
+}
+
+.front {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #a6a6a6;
+  background-color: #f2f2f2;
+  transform: rotateY(90deg);
+}
+
+.back {
+  background-color: #333;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+}
+
+.flip {
+  transform: rotateY(0deg);
+}
+.match {
+  transform: rotateY(0deg);
+}
+
+.show {
+  transform: rotateY(0deg);
+}
+
+@media screen and (min-width: 770px) {
+  .head {
+    max-width: 760px;
+  }
+
+  .container {
+    grid-template-columns: repeat(4, auto);
+  }
+
+  .cell div {
+    height: 170px;
+  }
+}
+    </style>
+    <script>
+        const card = document.querySelectorAll('.cell')
+const front = document.querySelectorAll('.front')
+const container = document.querySelector('.container')
+const score = document.querySelector('.score span')
+
+
+
+suffleImage()
+clicking()
+function suffleImage(){
+
+
+    card.forEach(c=>{
+
+        const num = [...Array(card.length).keys()]
+        const random = Math.floor(Math.random()*card.length)
+
+        c.style.order = num[random]
+    })
+}
+
+
+function clicking(){
+
+    for(let i =0; i<card.length; i++){
+
+
+        card[i].addEventListener('click' ,()=>{
+
+            front[i].classList.add('flip')
+           const filppedCard = document.querySelectorAll('.flip')
+
+            if(filppedCard.length == 2){
+
+                container.style.pointerEvents ='none'
+                
+                setInterval(() => {
+                    
+                    container.style.pointerEvents ='all'
+                }, 1000);
+ 
+                match(filppedCard[0] , filppedCard[1])
+            }
+        })
+    }
+}
+
+
+
+
+function match(cardOne , cardTwo){
+
+    if(cardOne.dataset.index == cardTwo.dataset.index){
+
+        score.innerHTML = parseInt(score.innerHTML) + 1
+       
+        cardOne.classList.remove('flip') 
+        cardTwo.classList.remove('flip') 
+
+
+        cardOne.classList.add('match')
+        cardTwo.classList.add('match')
+
+
+    }else{
+
+        setTimeout(() => {
+            
+            cardOne.classList.remove('flip') 
+            cardTwo.classList.remove('flip') 
+        }, 1000);
+    }
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Matching Game Sahabat (A-I)</title>
+    <link rel="stylesheet" href="../../../style.css">
+   
+</head>
+<body >
+    <div class="page">
+        <div class="grid-container1">
+            <div class="grid-item"><p style="font-size: small;">Matching</p><p style="font-size: small;">Game</p></div>
+            <div class="grid-item"> <img src="../../../assets/icons/logo hadith exercise.png" alt="logo" width="20%"> </div>
+            <div class="grid-item"> <p style="font-size: small;">Matching</p><p style="font-size: small;">Game</p> </div>  
+        </div>
+        <div><a href="../../menu matchinggame.html" class="buttonbacktomenu"><img src="../../../assets/icons/iconback.jpg" alt="back to menu" width="50%"> </a> </div>
+
+        <div class="penjelasansahabat" >
+            "Sahabat (ash-shahabi) adalah orang yang pernah berjumpa 
+            dengan Nabi dalam keadaan beriman kepadanya dan meninggal dalam keadaan Islam."
+            <br>- Ibnu Hajar Al-Asqalani (“al-Iṣābah fī Tamyīz al-Ṣaḥābah”) -
+            <p style="padding-top: 7px;">"Orang-orang yang terdahulu lagi yang pertama-tama (masuk Islam) dari 
+            golongan muhajirin dan anshar dan orang-orang yang mengikuti mereka dengan baik, Allah 
+            ridha kepada mereka dan merekapun ridha kepada Allah dan Allah menyediakan bagi mereka 
+            surga-surga yang mengalir sungai-sungai di dalamnya selama-lamanya. Mereka kekal di dalamnya. 
+            Itulah kemenangan yang besar".
+            <br>(Q.S. At-Taubah: 100). </p>
+        </div>
+        <div class="bodygame">
+        <div class="container">
+            <h2> Matching Game Sahabat (A-I)</h2>
+            <div class="scoretimercontainer">
+                <span id="matches">0 match(es)</span>
+                <span id="timerSUPEREASY"> time 0</span>
+            </div>
+            <div class="container-category">
+                <div id="card1" class="card" data-index="1">jabir bin abdullah</div>
+                <div id="card2" class="card" data-index="1">jabir bin abdullah</div>
+                <div id="card3" class="card" data-index="2">abu sa'id al-khudri</div>
+                <div id="card4" class="card" data-index="2">abu sa'id al-khudri </div>
+            </div>
+            <button class="reset" onclick="window.location.reload();"> Reset </button>
+            <div class="pesangamecontainer" id="pesan">
+                <span id="pesan"> <b> ayo main </b> </span>
+                <span id="okmulaiSUPEREASY" onclick="startGameSUPEREASY()"> OK </span> </div>
+            <div class="pesangamecontainer" id="pesantimeout" style="visibility: hidden;">
+                <span id="pesan"> <b> coba lagi </b> </span>
+                <span id="okmulai" onclick="window.location.reload();"> OK </span> </div>
+            <div class="pesangamecontainer" id="popup" style="visibility: hidden;">
+                <span id="pesan"> <b> <p>Alhamdulillah..!</p>
+                                    <p style="padding-top: 10px;">kamu berhasil! </p> </b> </span>
+               <a href="../sahabat i-i/8.html"> <span id="ok">  LANJUT </span> </a></div>
+        </div>
+
+    </div>
+</div>
+    <footer style=" text-align: center; font-size: 5px; padding-top: 20px;">
+        hadith exercise v1.0
+    </footer>
+    <script src="../../../script.js"></script>
+</body>
+</html>

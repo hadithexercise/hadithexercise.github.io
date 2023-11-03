@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadis ke-37</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <audio id="myAudio">
+        <source src="" type="audio/mpeg">
+    </audio> 
+    <div class="page">
+        <div class="grid-container1">
+            <div class="grid-item"><p style="font-size: small;">Hadis</p><p style="font-size: small;">Ke-37</p></div>
+            <div class="grid-item"> <img src="../assets/icons/logo hadith exercise.png" alt="logo" width="20%"> </div>
+            <div class="grid-item"> <p style="font-size: small;">Hadis</p><p style="font-size: small;">Ke-37</p> </div>  
+        </div>
+
+        <div class="gambarhadis" style="padding-bottom: 7px;">
+           <p><b>Hadis Ke-37</b></p>
+            <p><img src="../assets/gambar/hadis37gambar.png" alt="gambarhadis1" width="50%"></p>
+        </div>
+
+        <div id="tekshadis">
+            <p>
+                الْحَدِيْثُ السَّابِعُ وَالثَّلاَثُوْنَ | فِى ذِكْرِ اللهِ تَعَالَى وَطَلَبِ الْعِلْمِ الشَّرْعِي | عَنْ أَبِيْ هُرَيْرَةَ رَضِيَ اللهُ عَنْهُ | قَالَ |سَمِعْتُ رَسُوْلَ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ يَقُوْلُ | الدُّنْيَا مَلْعُوْنَةٌ | مَلْعُوْنٌ مَا فِيْهَا
+ إِلاَّ ذِكْرَ اللهِ | وَمَا وَالَاهُ |  أَوْ عَالِمًا أَوْ مُتَعَلِّمًا 
+
+            </p>
+            <p style="padding-top: 7px;">
+                رَوَاهُ الإِمَامُ اِبْنُ مَاجَة
+            </p>
+            <p style="padding-top: 12px;">
+                Hadits Ketiga Puluh Tujuh | Dzikir dan Menuntut Ilmu Syar'i|
+                Diriwayatkan dari Abu Hurairah ra.| beliau berkata:| Saya mendengar 
+                Rasulullah saw. bersabda:| Dunia ini terlaknat (terjauhkan dari rahmat Allah)| terlaknat 
+                semua yang ada di dalamnya kecuali dzikir kepada Allah | dan hal yang mengantarkan 
+                kepadanya, atau orang yang alim atau orang yang belajar
+            </p>
+            <p style="padding-top: 7px;">
+                (H.R Imam Ibnu Majah)
+            </p>
+        </div>
+        
+        <div class="tombolaudio">
+
+            <div class="audioslider-container" style="width: 300px; text-align: center; margin-left: auto; margin-right: auto; padding-top: 10px; ">
+                <input class="audioslider" type="range" id="audioslider" max="100" min="0" step="1" value="0"/>
+            </div>
+           
+            <ul style=" width: 300px; display: flex; padding: 5px; margin-left: auto; margin-right: auto; align-content: center; justify-content: center;">
+                <li style="display: flex; padding: 1px; justify-content: left; width: 70px; margin: 1px;">
+                    <button onclick="playAudio(myAudio)" style=" cursor: pointer;" id="play" class="buttonplaypausedone" > <img src="../assets/icons/iconplay1.png" alt="play" width="50%"> </button> </button></li>
+                <li style="display: flex; padding: 1px; justify-content: left; width: 70px; margin: 5px;">
+                    <button onclick="pauseAudio(myAudio)" id="pause" style="cursor: pointer;" class="buttonplaypausedone"><img src="../assets/icons/iconpause.png" alt="stop" width="50%"> </button> </li>
+                <li style="display: flex; padding: 1px; justify-content: right; width: 70px; margin: 5px;">
+                    <button onclick="history.back()" style="background: none; border: none;" class="buttonplaypausedone"><img src="../assets/icons/icondone.png" alt="done" width="50%"> </button> </li>
+            </ul>
+            
+        </div>
+    </div>
+
+    <footer style=" text-align: center; font-size: 5px; padding-top: 20px;">
+        hadith exercise v1.0
+    </footer>
+
+    <script src="../script.js"> </script>
+</body>
+</html>

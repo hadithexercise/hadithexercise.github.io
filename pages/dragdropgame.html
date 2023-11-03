@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Drag Drop Game</title>
+    <!--<link rel="stylesheet" href="../style.css">-->
+</head>
+<body class="bodygame">
+    <div class="page">
+        <div class="grid-container1">
+            <div class="grid-item"><p style="font-size: small;">DragDrop</p><p style="font-size: small;">Hadith</p></div>
+            <div class="grid-item"> <img src="../assets/icons/logo hadith exercise.png" alt="logo" width="20%"> </div>
+            <div class="grid-item"> <p style="font-size: small;">DragDrop</p><p style="font-size: small;">Hadith</p> </div>  
+        </div>
+        <a href="../pages/menu.html"><button class="buttonmulai"> kembali ke menu </button></a>
+
+        <div class="terjemahhadis" >
+            Hadis Kedua Arwah adalah Bala Tentara
+            Dari Sayyidah Aisyah ra. beliau berkata: Aku mendengar Nabi saw. 
+            bersabda : Arwah (roh-roh) adalah seperti bala tentara yang dikerahkan. Roh 
+            yang saling mengenal pasti menjalin keakraban. Dan roh yang tidak saling mengenal 
+            pasti terjadi perbedaan.
+        
+            <br>(H.R Imam Bukhari)
+           <!-- <p style="padding-top: 7px;">"Orang-orang yang terdahulu lagi yang pertama-tama (masuk Islam) dari 
+            golongan muhajirin dan anshar dan orang-orang yang mengikuti mereka dengan baik, Allah 
+            ridha kepada mereka dan merekapun ridha kepada Allah dan Allah menyediakan bagi mereka 
+            surga-surga yang mengalir sungai-sungai di dalamnya selama-lamanya. Mereka kekal di dalamnya. 
+            Itulah kemenangan yang besar".
+            <br>(Q.S. At-Taubah: 100). </p> -->
+        </div>
+        <div class="bodygamedragdrop">
+        <h2>Drag Drop Hadith</h2>
+        <p>susun agar menjadi hadis yang benar</p>
+        <ul class="draggable-list" id="draggable-list"></ul>
+        <!--<button class="check-btn" id="check">
+      Check Order
+      <i class="fas fa-paper-plane"></i>
+    </button>-->
+</div>
+    <footer style=" text-align: center; font-size: 5px; padding-top: 20px;">
+        hadith exercise v1.0
+    </footer>
+   <!-- <script src="../script.js"></script> -->
+    </body>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+
+.page {
+    width: 90%;
+    margin: auto;
+}
+.grid-container1 {
+    display: grid;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: auto auto auto ;
+    padding: 10px;
+    padding-top: 20px;
+}
+.grid-item {
+    background-color: plum;
+    border: 5px solid purple;
+    padding: 10px;
+    font-size: 20px;
+    color: purple;
+    text-align: center;
+}  
+.bodygame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:rgb(229, 248, 229);
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(243, 206, 243);
+    gap: 30px;
+    padding: 40px 60px;
+}
+
+h2 {
+    font-size: 30px;
+    color:rgb(254, 99, 102);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+.bodygamedragdrop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-start;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+  }
+  
+  .draggable-list {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid seagreen;
+    border-radius: 3px;
+    color: rgb(80, 21, 21);
+    padding: 0;
+    list-style-type: none;
+    margin: 7px;
+  }
+  
+  .draggable-list li {
+    background-color: beige;
+    display: flex;
+    flex: 1;
+  }
+  
+  .draggable-list li:not(:last-of-type) {
+    border-bottom: 2px solid seagreen;
+  }
+  
+  .draggable-list .number {
+    background-color: seagreen;
+    color: beige;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    height: 60px;
+    width: 60px;
+  }
+  
+  .draggable-list li.over .draggable {
+    background-color: #eaeaea;
+  }
+  
+  .draggable-list .person-name {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+  }
+  
+  .draggable-list li.right .person-name {
+    color: seagreen;
+  }
+  
+  .draggable-list li.wrong .person-name {
+    color: #ff3838;
+  }
+  
+  .draggable {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    flex: 1;
+    font-size: 20px;
+    cursor: move;
+    touch-action: none;
+  }
+
+  .draggable.dragging {
+    opacity: 0.5;
+  }
+  .terjemahhadis {
+    background-color: rgb(243, 206, 243);
+    padding: 10px; 
+    color: rgb(41, 41, 99); 
+    text-align: center;
+    border: rgb(41, 41, 99) 4px solid;
+    border-radius: 5px;
+    font-size: small;
+}
+    </style>
+    <script>
+const draggable_list = document.getElementById('draggable-list');
+//const check = document.getElementById('check');
+
+const richestPeople = [
+  'الْحَدِيْثُ الثَّانِي',
+  'فِى أَنَّ الْأَرْوَاحَ جُنُوْدٌ مُجَنَّدَةٌ',
+  'عَنْ عَائِشَةَ رَضِيَ اللهُ عَنْهَا',
+  'قَالَتْ',
+  'سَمِعْتُ النَّبِيَّ ﷺ يَقُوْلُ',
+  'الْأَرْوَاحُ جُنُوْدٌ مُجَنَّدَةٌ',
+  'فَمَا تَعَارَفَ مِنْهَا ائْتَلَفَ',
+  'وَمَا تَنَاكَرَ مِنْهَا اخْتَلَفَ',
+  'رَوَاهُ الإِمَامُ البُخَارِى',
+ 
+];
+
+// Store listitems
+const listItems = [];
+
+let dragStartIndex;
+
+createList();
+
+// Insert list items into DOM
+function createList() {
+  [...richestPeople]
+    .map(a => ({ value: a, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(a => a.value)
+    .forEach((person, index) => {
+      const listItem = document.createElement('li');
+
+      listItem.setAttribute('data-index', index);
+
+      listItem.innerHTML = `
+      <span class="number">${index + 1}</span>
+        <div class="draggable" draggable="true">
+          <p class="person-name">${person}</p>
+        </div>
+      `;
+
+      listItems.push(listItem);
+
+      draggable_list.appendChild(listItem);
+    });
+
+  addEventListeners();
+}
+
+function onmousedown() {
+   console.log('Event: ', 'dragstart');
+  dragStartIndex = +this.closest('li').getAttribute('data-index');
+  console.log(dragStartIndex)
+}
+
+
+function onmouseenter() {
+   console.log('Event: ', 'dragenter');
+  this.classList.add('over');
+}
+
+function onmouseleave() {
+   console.log('Event: ', 'dragleave');
+  this.classList.remove('over');
+}
+
+function onmouseover(e) {
+   console.log('Event: ', 'dragover');
+  e.preventDefault();
+  e.clientY
+}
+
+function onmouseup() {
+   console.log('Event: ', 'drop');
+  //this.classList.add('over');
+  //this.classList.remove('over');
+  const dragEndIndex = +this.getAttribute('data-index');
+
+  swapItems(dragStartIndex, dragEndIndex);
+
+  this.classList.remove('over');
+}
+//document.ontouchend === document.onmouseenter
+  //  document.ontouchmove === document.onmousemove
+    //document.ontouchcancel === document.onmouseup
+
+//function ontouchstart () {
+  //  document.ontouchstart === document.onmousedown
+   
+
+//}
+
+
+// Swap list items that are drag and drop
+function swapItems(fromIndex, toIndex) {
+  const itemOne = listItems[fromIndex].querySelector('.draggable');
+  const itemTwo = listItems[toIndex].querySelector('.draggable');
+
+  listItems[fromIndex].appendChild(itemTwo);
+  listItems[toIndex].appendChild(itemOne);
+
+  listItems.forEach((listItem, index) => {
+    const personName = listItem.querySelector('.draggable').innerText.trim();
+
+    if (personName !== richestPeople[index]) {
+      listItem.classList.add('wrong');
+    } else {
+      listItem.classList.remove('wrong');
+      listItem.classList.add('right');
+    }
+  });
+}
+
+
+// Check the order of list items
+
+//function checkOrder() {}
+/*var pos = {
+  x: 0,
+  y: 0
+};
+function setPosition(e) {
+  if (e.type == "touchstart" || e.type == "mousedown") {
+    buttonDown = true;
+  }
+  if (e.type == "touchstart" || e.type == "touchmove") {
+    pos.x = e.touches[0].clientX;
+    pos.y = e.touches[0].clientY;
+  } else {
+    pos.x = e.clientX;
+    pos.y = e.clientY;
+  }
+}*/
+
+/*function onTouchMove (e) {
+    let lokasi = {x: e.touches[0].clientX,
+                    y: e.touches[0].clientY}
+    mouseOver(lokasi)
+}*/
+
+function addEventListeners() {
+  const draggables = document.querySelectorAll('.draggable');
+  const dragListItems = document.querySelectorAll('.draggable-list li');
+
+  draggables.forEach(draggable => {
+    draggable.addEventListener('mousedown', onmousedown);
+  });
+  draggables.forEach(draggable => {
+    draggable.addEventListener('touchstart', onmousedown);
+  });
+ /* draggables.forEach(draggable => {
+    draggable.addEventListener('touchstart', e => {
+        dragStartIndex = +draggable.closest('li').getAttribute('data-index')
+        console.log(dragStartIndex)
+    })
+  });*/
+
+  dragListItems.forEach(item => {
+    item.addEventListener('mousemove', onmouseover);
+    item.addEventListener('mouseup', onmouseup)
+    item.addEventListener('mouseenter', onmouseenter);
+    item.addEventListener('mouseleave', onmouseleave);
+
+  });
+  dragListItems.forEach(item => {
+    item.addEventListener('touchmove', onmouseover);
+    item.addEventListener('touchend', onmouseup)
+   
+
+  });
+  /*dragListItems.forEach(item => {
+    item.addEventListener('touchmove', onTouchMove)
+    item.addEventListener('touchend', mouseUp)
+    item.addEventListener('touchend', mouseEnter);
+    item.addEventListener('touchend', mouseLeave);
+
+  });*/
+
+  
+  
+}
+    </script>
+    </html>

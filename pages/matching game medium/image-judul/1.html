@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Matching Image and Content</title>
+    <link rel="stylesheet" href="../../../style.css">
+   
+</head>
+<body >
+    <div class="page">
+        <div class="grid-container1">
+            <div class="grid-item"><p style="font-size: small;">Matching</p><p style="font-size: small;">Game</p></div>
+            <div class="grid-item"> <img src="../../../assets/icons/logo hadith exercise.png" alt="logo" width="20%"> </div>
+            <div class="grid-item"> <p style="font-size: small;">Matching</p><p style="font-size: small;">Game</p> </div>  
+        </div>
+        <div><a href="../../menu matchinggame.html" class="buttonbacktomenu"><img src="../../../assets/icons/iconback.jpg" alt="back to menu" width="50%"> </a> </div>    
+    <div class="bodygame">
+    <div class="container">
+        <h2> Matching Image and Content</h2>
+        <div class="scoretimercontainer">
+            <span id="matches">0 match(es)</span>
+            <span id="timerMEDIUM"> time 0</span>
+        </div>
+        <div class="container-category-medium">
+            <div id="card1" class="card" data-index="1"> <img src="../../../assets/gambar/siput.png" style="width: 100%;"/> </div>
+            <div id="card2" class="card" data-index="1">
+                الْحَدِيْثُ الْأَوَّلُ
+                <br>فِى تَحْرِيْرِ النِّيَّةِ
+            </div>
+            <div id="card3" class="card" data-index="2"><img src="../../../assets/gambar/hadis2gambar.png" style="width: 100%;"/></div>
+            <div id="card4" class="card" data-index="2">
+                الْحَدِيْثُ الثَّانِي
+                <br>فِى أَنَّ الْأَرْوَاحَ جُنُوْدٌ مُجَنَّدَةٌ
+            </div>
+            <div id="card1" class="card" data-index="3"> <img src="../../../assets/gambar/hadis3gambar.png" style="width: 100%;"/> </div>
+            <div id="card2" class="card" data-index="3">
+                الْحَدِيْثُ الثَّالِثُ
+                <br> فِى تَوْطِيْدِ الْأُخُوَّةِ
+            </div>
+            <div id="card3" class="card" data-index="4"><img src="../../../assets/gambar/hadis4gambar.png" style="width: 100%;"/></div>
+            <div id="card4" class="card" data-index="4">
+                الْحَدِيْثُ الرَّابِعُ
+                <br>فِى الْجِهَادِ وَطَلَبِ الْعِلْمِ وَنَشْرِه
+            </div>
+            <div id="card1" class="card" data-index="5"> <img src="../../../assets/gambar/hadis5gambar.png" style="width: 100%;"/> </div>
+            <div id="card2" class="card" data-index="5">
+                الْحَدِيْثُ الْخَامِس
+                <br> فىِ سِحْرِ الْبَيَانِ
+            </div>
+            <div id="card3" class="card" data-index="6"><img src="../../../assets/gambar/hadis6gambar.png" style="width: 100%;"/></div>
+            <div id="card4" class="card" data-index="6">
+                الْحَدِيْثُ السَّادِس
+                <br>فِى صِلَةِ الرَّحِمِ 
+            </div>
+            <div id="card1" class="card" data-index="7"> <img src="../../../assets/gambar/hadis7gambar.png" style="width: 100%;"/> </div>
+            <div id="card2" class="card" data-index="7">
+                الْحَدِيْثُ السَّابِعُ
+                <br> فِى زِيَارَةِ الْمَرِيْضِ وَاْلإِخْوَانِ
+            </div>
+            <div id="card3" class="card" data-index="7"><img src="../../../assets/gambar/hadis8gambar.png" style="width: 100%;"/></div>
+            <div id="card4" class="card" data-index="7">
+                الْحَدِيْثُ الثَّامِن
+                <br>فِى مَتَى تَكُوْنُ الدُّنْيَا بِيَدِكَ 
+            </div>
+        </div>
+        <button class="reset" onclick="window.location.reload();"> Reset </button>
+        <div class="pesangamecontainer" id="pesan">
+            <span id="pesan"> <b> ayo main </b> </span>
+            <span id="okmulaiMEDIUM" onclick="startGameMEDIUM()"> OK </span> </div>
+        <div class="pesangamecontainer" id="pesantimeout" style="visibility: hidden;">
+            <span id="pesan"> <b> coba lagi </b> </span>
+            <span id="okmulai" onclick="window.location.reload();"> OK </span> </div>   
+        <div class="pesangamecontainer" id="popup" style="visibility: hidden;">
+            <span id="pesan"> <b> <p>Alhamdulillah..!</p>
+                                <p style="padding-top: 10px;">kamu berhasil! </p> </b> </span>
+            <a href="../../menu matchinggame.html"><span id="ok"> SELESAI </span> </a>
+        </div>
+    </div>
+</div>
+    <footer style=" text-align: center; font-size: 5px; padding-top: 20px;">
+        hadith exercise v1.0
+    </footer>
+   
+    <script src="../../../script.js"></script>
+</body>
+</html>

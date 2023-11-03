@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <!--<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">-->
+        
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slipjs/2.1.0/slip.min.js"></script>
+        
+    </head>
+    <body>
+    <ul id="todolist">
+        <li>
+        <div class="item">
+            <div class="task">Mom asked me not to forget to drink more water at school</div>
+            
+        </div>
+        </li>
+        <li>
+        <div class="item">
+                <div class="task">Tomorrow is Linda birtyday, must go to shop today to buy the Hello Kitty as gift for her tomorrow 
+            </div>
+            
+        </div> 
+        </li>      
+        
+        
+                
+   </ul>   
+   
+   <p id="note">Hold and drag to rearrange items</p>
+<style>
+   body {
+    font-family: 'Roboto', sans-serif;
+    background: #272822;
+    
+}
+
+.task {
+    display: inline-block;
+    width: 85vw;
+    padding: 10px;
+}
+
+.id {
+   display: inline-block; 
+   width: 5vw;
+   vertical-align: top;
+}
+
+ul{
+   list-style: none;
+   padding: 0; 
+   margin: 0;
+}
+
+.item {
+
+   color: #fff; 
+   background: #374850;
+   height: 50px;
+   text-align: center;
+   padding: 5px 5px;
+   -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+           box-sizing: border-box;
+   -webkit-border-radius: 3px;
+           border-radius: 3px;
+   overflow: hidden;
+   margin: 2px;
+}
+
+.alter {
+    display: block;
+   color: #0af; 
+   font-size: 0.7em;
+  /* width: 100px;*/
+   margin-top: 5px;
+ /*float: right;
+   background: green;*/
+}
+
+strike {
+   color: grey; 
+}
+
+.alter span {
+    background: #333;
+    padding: 2px 5px;
+    margin-left: 2px;
+    margin-top: 0px;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    float: right;
+}
+
+span.compl {
+   float: left; 
+   background: grey;
+   color: #333;
+}
+
+span.compl.done {
+   float: left; 
+   background: green;
+   color: #ccc;
+}
+
+#note {
+   color: #1080a0; 
+   text-align:center;
+   margin-top: 10px;
+}
+
+</style>
+   <script>
+   
+   todolist = document.getElementById("todolist");
+   new Slip(todolist);
+   
+   todolist.addEventListener('slip:reorder', function(e) {
+    e.target.parentNode.insertBefore(e.target, e.detail.insertBefore);
+  })
+   
+   
+   </script>  
+        
+    </body>
+</html>

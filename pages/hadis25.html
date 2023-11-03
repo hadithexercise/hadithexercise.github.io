@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadis ke-25</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <audio id="myAudio">
+        <source src="../assets/media/25.mp3" type="audio/mpeg">
+    </audio> 
+
+    <div class="page">
+        <div class="grid-container1">
+            <div class="grid-item"><p style="font-size: small;">Hadis</p><p style="font-size: small;">Ke-25</p></div>
+            <div class="grid-item"> <img src="../assets/icons/logo hadith exercise.png" alt="logo" width="20%"> </div>
+            <div class="grid-item"> <p style="font-size: small;">Hadis</p><p style="font-size: small;">Ke-25</p> </div>  
+        </div>
+
+        <div class="gambarhadis" style="padding-bottom:7px;">
+            <p><b>Hadis Ke-25</b></p>
+             <p><img src="../assets/gambar/hadis25gambar.png" alt="gambarhadis1" width="50%"></p>
+         </div>
+
+        <div id="tekshadis">
+            <p>
+                الْحَدِيْثُ الْخَامِسُ وَالْعِشْرُوْن | فِى الدَّعْوَةِ إِلَى اللهِ | قَالَ عَبْدُ اللهِ بْنُ مَسْعُوْدٍ رَضِيَ اللهُ عَنْهُ | سَمِعْتُ النَّبِيَّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ يَقُوْلُ | نَضَّرَ اللهُ امْرَأً سَمِعَ مِنَّا شَيْئًا | فَبَلَّغَهُ كَمَا سَمِعَ | فَرُبَّ مُبَلَّغٍ أَوْعَي مِنْ سَامِعٍ
+            </p>
+            <p style="padding-top: 7px;">
+                رَوَاهُ الإِمَامُ التِرْمِذِى 
+            </p>
+            <p style="padding-top: 12px;">
+                Hadis Ke Dua Puluh Lima | Menyeru ke Jalan Allah|
+                Abdullah bin Mas-ud ra. berkata:| Saya mendengar Nabi saw. bersabda:| Semoga
+                 Allah mencerahkan wajah orang yang mendengar sesuatu dariku | lalu dia 
+                 menyampaikannya persis seperti dengan yang dia dengar. | Karena betapa banyak 
+                 orang yang mendapat (berita/keterangan) lebih memahami daripada orang yang 
+                 langsung mendengar
+            </p>
+            <p style="padding-top: 7px;">
+                (H.R Imam At-Tirmidzi)
+            </p>
+        </div>
+        
+        <div class="tombolaudio">
+
+            <div class="audioslider-container" style="width: 300px; text-align: center; margin-left: auto; margin-right: auto; padding-top: 10px; ">
+                <input class="audioslider" type="range" id="audioslider" max="100" min="0" step="1" value="0"/>
+            </div>
+
+             <ul style=" width: 300px; display: flex; padding: 5px; margin-left: auto; margin-right: auto; align-content: center; justify-content: center;">
+                <li style="display: flex; padding: 1px; justify-content: left; width: 70px; margin: 1px;">
+                    <button onclick="playAudio(myAudio)" style=" cursor: pointer;" id="play" class="buttonplaypausedone" > <img src="../assets/icons/iconplay1.png" alt="play" width="50%"> </button> </button></li>
+                <li style="display: flex; padding: 1px; justify-content: left; width: 70px; margin: 5px;">
+                    <button onclick="pauseAudio(myAudio)" id="pause" style="cursor: pointer;" class="buttonplaypausedone"><img src="../assets/icons/iconpause.png" alt="stop" width="50%"> </button> </li>
+                <li style="display: flex; padding: 1px; justify-content: right; width: 70px; margin: 5px;">
+                    <button onclick="history.back()" style="background: none; border: none;" class="buttonplaypausedone"><img src="../assets/icons/icondone.png" alt="done" width="50%"> </button> </li>
+            </ul>
+           
+        </div>
+    </div>
+
+    <footer style=" text-align: center; font-size: 5px; padding-top: 20px;">
+        hadith exercise v1.0
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>

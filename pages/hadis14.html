@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadis ke-14</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <audio id="myAudio">
+        <source src="../assets/media/14.mp3" type="audio/mpeg">
+    </audio> 
+    <div class="page">
+        <div class="grid-container1">
+            <div class="grid-item"><p style="font-size: small;">Hadis</p><p style="font-size: small;">Ke-14</p></div>
+            <div class="grid-item"> <img src="../assets/icons/logo hadith exercise.png" alt="logo" width="20%"> </div>
+            <div class="grid-item"> <p style="font-size: small;">Hadis</p><p style="font-size: small;">Ke-14</p> </div>  
+        </div>
+
+        <div class="gambarhadis" style="padding-bottom:7px;">
+            <p><b>Hadis Ke-14</b></p>
+             <p><img src="../assets/gambar/hadis14gambar.png" alt="gambarhadis1" width="50%"></p>
+         </div>
+
+        <div id="tekshadis">
+            <p>
+                الْحَدِيْثُ الرَّابِعَ عَشَر  |  فِى طَلَبِ الْبَرَكَةِ فِى الْمَالِ |  عَنْ سَعِيْدِ بْنِ الْمُسَيِّبِ  |  وَعُرْوَةَ بْنِ الزُّبَيْرِ  |  أَنَّ حَكِيْمَ بْنَ حِزَامٍ رَضِيَ اللهُ عَنْهُ قَالَ  |  سَأَلْتُ رَسُوْلَ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ  |  فَأَعْطَانِي،  |  ثُمَّ سَأَلْتُهُ فَأَعْطَانِي  |  ثُمَّ قَالَ لِيْ  |  يَا حَكِيْمُ  |  إِنَّ هَذَا الْمَالَ خَضِرٌ حُلْوٌ  |   فَمَنْ أَخَذَهُ بِسَخَاوَةِ نَفْسٍ |  بُوْرِكَ لَهُ فِيْهِ  |   وَمَنْ أَخَذَهُ بِإِشْرَافِ نَفْسٍ |  لَمْ يُبَارَكْ لَهُ فِيْهِ  |  وكَانَ كَالَّذِي يَأْكُلُ وَلاَ يَشْبَعُ،  |  وَالْيَدُ الْعُلْيَا خَيْرٌ مِنَ الْيَدِ السُّفْلَى
+
+            </p>
+            <p style="padding-top: 7px;">
+                رَوَاهُ الإِمَامُ البُخَارِى 
+            </p>
+            <p style="padding-top: 12px;">
+                Hadis Ke Empat Belas| Mencari Berkah Dalam Harta Benda|
+                Dari Said bin Musayyib| dan Urwah bin Zuber| Sesungguhnya Hakim bin Hizam ra. berkata:| Aku meminta sesuatu kepada Rasulullah saw.| dan beliau pun memberiku| Kemudian aku meminta kepadanya lagi dan beliau pun memberiku| Lalu beliau bersabda kepadaku :| Wahai Hakim| Sesungguhnya harta benda ini hijau dan manis.|  Maka barang siapa mengambilnya dengan jiwa yang menerima,| ia pasti mendapatkan berkah di dalamnya.| Barang siapa mengambilnya dengan jiwa yang rakus,| maka ia tidak akan pernah memperoleh berkah di dalamnya.| Dan ia menjadi seperti seorang yang makan tetapi tidak merasa kenyang,| 
+                tangan yang di atas lebih baik daripada tangan yang di bawah
+            </p>
+            <p style="padding-top: 7px;">
+                (H.R Imam Bukhari)
+            </p>
+        </div>
+        
+        <div class="tombolaudio">
+
+            <div class="audioslider-container" style="width: 300px; text-align: center; margin-left: auto; margin-right: auto; padding-top: 10px; ">
+                <input class="audioslider" type="range" id="audioslider" max="100" min="0" step="1" value="0"/>
+            </div>
+           
+            <ul style=" width: 300px; display: flex; padding: 5px; margin-left: auto; margin-right: auto; align-content: center; justify-content: center;">
+                <li style="display: flex; padding: 1px; justify-content: left; width: 70px; margin: 1px;">
+                    <button onclick="playAudio(myAudio)" style=" cursor: pointer;" id="play" class="buttonplaypausedone" > <img src="../assets/icons/iconplay1.png" alt="play" width="50%"> </button> </button></li>
+                <li style="display: flex; padding: 1px; justify-content: left; width: 70px; margin: 5px;">
+                    <button onclick="pauseAudio(myAudio)" id="pause" style="cursor: pointer;" class="buttonplaypausedone"><img src="../assets/icons/iconpause.png" alt="stop" width="50%"> </button> </li>
+                <li style="display: flex; padding: 1px; justify-content: right; width: 70px; margin: 5px;">
+                    <button onclick="history.back()" style="background: none; border: none;" class="buttonplaypausedone"><img src="../assets/icons/icondone.png" alt="done" width="50%"> </button> </li>
+            </ul>
+            
+        </div>
+    </div>
+
+    <footer style=" text-align: center; font-size: 5px; padding-top: 20px;">
+        hadith exercise v1.0
+    </footer>
+
+    <script src="../script.js"> </script>
+</body>
+</html>
